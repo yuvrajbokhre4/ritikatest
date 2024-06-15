@@ -812,7 +812,7 @@
                                 everything, I’m a walking sitcom. My life is a comedy of errors, tripping over thin air
                                 and turning everyday mishaps into laugh-out-loud stories. But hey, that’s what makes me,
                                 me! I find joy in the chaos, and I’m here to sprinkle that joy through my creative
-                                work. Ready to dive into this whirlwind of fun and create some unforgettable moments
+                                work.Ready to dive into this whirlwind of fun and create some unforgettable moments
                                 together? Let’s make it happen!
                             </span>
                         </p>
@@ -883,12 +883,16 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 
     <script>
+
         const lenis = new Lenis({
-            duration: 2,
-            easing: (t) => (Math.sqrt(1 - Math.pow(t - 1, 2))),
+            duration: .6,
+            easing: (x) => (1 - Math.pow(1 - x, 3)),
             // syncTouch: true,
             // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
         })
+        // lenis.on('scroll', (e) => {
+        //     console.log(e)
+        // })
         function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)
@@ -898,6 +902,7 @@
             lenis.raf(time * 1000)
         })
         gsap.ticker.lagSmoothing(0)
+
     </script>
     <script src="./js/global.js" id="globalJs"></script>
     <script src="./js/landing.js" id="js"></script>
