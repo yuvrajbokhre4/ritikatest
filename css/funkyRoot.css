@@ -9,11 +9,13 @@
     --green-white: #D7FFFE;
     --white-white: #D7FFFE;
     --footer-bg: linear-gradient(180deg, #2C59EF 0%, #9CAEE9 100%);
-    --text-transform: "capitalize";
+    --text-transform: capitalize;
+    --head-text-transform: unset;
     --head-fontWeight: 100;
     --green-pink: #AE00E9;
     --myprocess-card-1: #DBB7F4;
     --myprocess-card-2: #E4C6FA;
     --myprocess-card-3: #EEDBFF;
     --myprocess-card-4: #F2E4FF;
+    --fontweight-bold-normal: 100;
 }

@@ -9,7 +9,8 @@
     --site-margin: clamp(1.25rem, 6.25vi + 0rem, 7.5rem);
     --image-corner-radius: clamp(0.5rem, 1vi + 0.3rem, 1.5rem);
     --work-grid-gap: clamp(3.75rem, 2.5vi + 3.25rem, 6.25rem);
-
+    --case-study-work-gap: clamp(1.88rem, 3.13vi + 1.25rem, 3.75rem);
+    --section-gap: clamp(5rem, 7.5vi + 3.5rem, 12.5rem);
 }
 
 @font-face {
@@ -155,7 +156,16 @@ body {
 }
 
 .sectionGap {
-    height: 200px;
+    height: var(--section-gap);
+}
+
+.imageTransitionContainers {
+    overflow: hidden;
+}
+
+.imageTransition {
+    transform-origin: top;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 
@@ -260,6 +270,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .footerContaint {
@@ -270,17 +281,20 @@ body {
 .footerContaint span {
     font-size: var(--fs-250);
     /* font-family: var(--secondary-font); */
-    font-weight: 650;
+    font-weight: var(--fontweight-bold-normal);
     text-transform: uppercase;
     line-height: .8;
     color: var(--white-white);
     /* display: flex; */
     flex-direction: column;
+    width: 100%;
 }
 
-.footerContaint span {
+.footerContaint>span {
     flex-basis: 50%;
     flex-grow: 1;
+    display: flex;
+    width: 100%;
 }
 
 .footerImageContainer {
@@ -372,6 +386,9 @@ body {
 
     .bottomLinksContainer {
         align-items: flex-end;
+    }
+    .footerContaint>span {
+        flex-direction: column !important;
     }
 }
 
