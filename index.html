@@ -855,7 +855,7 @@
                         <h3 class="footerContaint">
                             <span style="flex-direction: row;">
                                 <span>Let’s</span>
-                                <span>CREATE</span>
+                                <span style="align-items: flex-end;">CREATE</span>
                             </span>
                             <!-- <br> -->
                             <span>BEAUTIFUL</span>
@@ -897,28 +897,10 @@
     <script src="https://unpkg.com/split-type"></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js'></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    
 
     <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
 
-        const lenis = new Lenis({
-            duration: .6,
-            easing: (x) => (1 - Math.pow(1 - x, 3)),
-            // syncTouch: true,
-            // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-        })
-        // lenis.on('scroll', (e) => {
-        //     console.log(e)
-        // })
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000)
-        })
-        gsap.ticker.lagSmoothing(0)
 
     </script>
     <script src="./js/global.js" id="globalJs"></script>
